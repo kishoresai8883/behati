@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Monitor, Shield, Cloud, Code } from 'lucide-react';
 
-const Solutions1 = () => {
+const Solution3 = () => {
   return (
     <div className="min-h-screen bg-background my-20">
       {/* Hero Section */}
@@ -79,4 +79,4 @@ const Solutions1 = () => {
   );
 };
 
-export default Solutions1;
+export default Solution3;

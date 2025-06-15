@@ -21,7 +21,12 @@ import Product5 from './pages/Product5';
 import Product6 from './pages/Product6';
 import Product7 from './pages/Product7';
 import Product8 from './pages/Product8';
-import Insight from './pages/Insights1';
+import Solution1 from './pages/Solution1';
+import Solution2 from './pages/Solution2';
+import Solution3 from './pages/Solution3';
+import Solution4 from './pages/Solution4';
+import Insight1 from './pages/Insight1';
+import Insight2 from './pages/Insight2';
 
 const App = () => {
   return (
@@ -44,7 +49,12 @@ const App = () => {
           <Route path="/product6" element={<Product6/>}/>
           <Route path="/product7" element={<Product7/>}/>
           <Route path="/product8" element={<Product8/>}/>
-          <Route path="/insight1" element={<Insight />} />
+          <Route path="/solution1" element={<Solution1/>}/>
+          <Route path="/solution2" element={<Solution2/>}/>
+          <Route path="/solution3" element={<Solution3/>}/>
+          <Route path="/solution4" element={<Solution4/>}/>
+          <Route path="/insight1" element={<Insight1 />} />
+          <Route path="/insight2" element={<Insight2 />} />
         </Routes>
         <Footer/>
       </div>
