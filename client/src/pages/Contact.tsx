@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const Contact = () => {

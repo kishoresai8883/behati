@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { ArrowRight, Monitor, Shield, Cloud, Code } from 'lucide-react';
 

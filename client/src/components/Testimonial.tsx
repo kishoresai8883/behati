@@ -1,4 +1,4 @@
-import React from "react";
+
 import { StarIcon } from "@heroicons/react/20/solid";
 
 const testimonials = [
