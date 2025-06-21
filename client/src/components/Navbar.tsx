@@ -14,7 +14,6 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
@@ -22,7 +21,7 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 import { 
   Cloud,
@@ -65,10 +64,6 @@ const insights = [
   { name: 'Case Studies', path: '/insight2', icon: CursorArrowRaysIcon },
 ]
 
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
 
 const Navbar =() => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -278,7 +273,7 @@ const Navbar =() => {
                       <DisclosureButton
                         key={item.name}
                         as="a"
-                        href={item.href}
+                        
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
@@ -296,7 +291,7 @@ const Navbar =() => {
                       <DisclosureButton
                         key={item.name}
                         as="a"
-                        href={item.href}
+                        
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
@@ -314,7 +309,7 @@ const Navbar =() => {
                       <DisclosureButton
                         key={item.name}
                         as="a"
-                        href={item.href}
+                        
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}

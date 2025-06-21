@@ -1,15 +1,12 @@
 
 import { 
   ArrowRight, 
-  Star, 
   CheckCircle, 
   Users, 
   Target, 
-  Zap, 
   Shield, 
   Award,
   ArrowDown,
-  Quote
 } from 'lucide-react';
 
 const Insight1 = () => {
@@ -37,20 +34,6 @@ const Insight1 = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      content: 'The team delivered exceptional results that exceeded our expectations. Our digital presence has never been stronger.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'Growth Partners',
-      content: 'Professional, reliable, and incredibly talented. They transformed our vision into reality with precision and creativity.',
-      rating: 5
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-white">

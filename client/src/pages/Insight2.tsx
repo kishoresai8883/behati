@@ -1,15 +1,12 @@
 
 import { 
   ArrowRight, 
-  Star, 
   CheckCircle, 
   Users, 
   Target, 
-  Zap, 
   Shield, 
   Award,
   ArrowDown,
-  Quote
 } from 'lucide-react';
 
 const Insight2 = () => {
@@ -34,21 +31,6 @@ const Insight2 = () => {
       features: ['Logo Design', 'Brand Guidelines', 'Visual Identity', 'Brand Strategy'],
       price: 'From $3,500',
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      content: 'The team delivered exceptional results that exceeded our expectations. Our digital presence has never been stronger.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'Growth Partners',
-      content: 'Professional, reliable, and incredibly talented. They transformed our vision into reality with precision and creativity.',
-      rating: 5
     }
   ];
 

@@ -70,7 +70,7 @@ const Contact = () => {
               <div>
                 <label className="block text-sm font-medium mb-1">Message</label>
                 <textarea
-                  rows="5"
+                  rows={5}
                   placeholder="Your Message"
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
                   required
@@ -94,7 +94,7 @@ const Contact = () => {
           className="w-full h-full grayscale contrast-125 opacity-90"
           frameBorder="0"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.117755866765!2d78.47449361487937!3d17.385044788066553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb978c69db2d0d%3A0x84e2bb2dbd90de5b!2sHyderabad!5e0!3m2!1sen!2sin!4v1620298697986!5m2!1sen!2sin"
-          allowFullScreen=""
+          allowFullScreen
           loading="lazy"
         ></iframe>
       </section>
