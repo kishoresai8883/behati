@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 
-const Service3 = () => {
+const Service6 = () => {
     const services = [
     {
       icon: Code,
@@ -35,34 +35,34 @@ const Service3 = () => {
 
 const service = [
   {
-    title: "Seamless Tranisition",
-    description: "VDart Digital provides SAP on Cloud migration services, including assessments, data transfer strategies, and post-migration validation with a dedicated team for a seamless transition.",
+    title: "Automation Processes",
+    description: "VDart Digital optimizes technology stacks and automates infrastructure setups for efficient and effective goal achievement.",
     icon: "🌐"
   },
   {
-    title: "Data Security & Compliance",
-    description: "VDart Digital’s partnership with reliable cloud providers prioritizes security and compliance. We offer specialized consulting services for access control and encryption, with regular security audits and vulnerability assessments.",
+    title: "Security & Compliance Guidelines",
+    description: "At VDart Digital, we prioritize the security and confidentiality of our clients' data and assets. Our adherence to industry standards and robust security measures ensure protection against threats and vulnerabilities.",
     icon: "🎨"
   },
   {
-    title: "Cost Management",
-    description: "Our team optimizes cloud resource usage and spending with real-time insights and automated tools. We help clients control costs and offer optimization recommendations.",
+    title: "Scaling & Resource Optimization",
+    description: "VDart Digital helps businesses optimize resource allocation based on demand patterns, increasing efficiency, reducing costs, and ensuring resilience in changing market conditions.",
     icon: "🚀"
   },
   {
     
-    title: "Integration Challeges",
-    description: "VDart Digital integrates SAP on Cloud with other systems using pre-built or custom tools and thorough testing for seamless data flow.",
+    title: "Establishing Secure Infrastructure",
+    description: "We help you create a secure and reliable infrastructure that meets high standards.",
     icon: "🌐"
   },
   {
-    title: "Performance Monitoring & Support",
-    description: "We at VDart Digital provide proactive monitoring and technical support for SAP systems on the cloud. We also offer SLAs for critical incidents with guaranteed response and resolution times.",
+    title: "Collaboration & Uniformity",
+    description: "Our focus is on promoting collaboration and productivity in software development and platform engineering through teamwork and streamlined processes.",
     icon: "🎨"
   },
   {
-    title: "Connectivity & Network",
-    description: "VDart Digital helps clients with network requirements, provides reliable connectivity options, and improves uptime with redundant configurations. We also offer guidance on enhancing SAP application performance.",
+    title: "Cost-Effective Strategies",
+    description: "VDart Digital offers cost-effective platform engineering solutions that utilize open-source technology and strategic resource allocation for maximum ROI and business success.",
     icon: "🚀"
   },
 ];
@@ -91,13 +91,13 @@ const partners = [
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transform Your Business With
+            Drive Consistency & Expand Your Business With
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              SAP on the Cloud
+              Platform Engineering
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-6xl mx-auto leading-relaxed">
-            Leverage the powerful cloud capabilities to streamline operations, increase productivity, and grow effortlessly.
+            Utilize Platform Engineering resources to transform your visions into reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
@@ -149,14 +149,14 @@ const partners = [
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">SAP on the Cloud</h2>
+        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Platform Engineering</h2>
         <div className="grid lg:grid-cols-2 max-w-7xl mx-auto items-center px-4 sm:px-6 lg:px-8">
           <div className="text-left pr-8">
             <h2 className="text-xl md:text-2xl mb-4" style={{ color: '#232323' }}>
-              Elevate your business with VDart Digital's SAP Cloud Services, focussing on seamless integration, robust monitoring, 24/7 support, and multi-cloud options for maximum benefit.
+              VDart Digital optimizes platform performance through advanced platform engineering solutions and cost-effective strategies. Trust VDart Digital for peak platform reliability.
             </h2>
             <p className="text-md text-gray-600 max-w-3xl mx-auto">
-              VDart Digital offers comprehensive SAP Cloud Migration Services, including expert migration planning, data security, and compliance. We optimize connectivity, manage costs, and provide multi-cloud options for flexibility. VDart Digital specializes in seamless integration and robust monitoring with 24/7 support. Our tailored services help clients maximize SAP on Cloud benefits.
+              VDart Digital provides advanced platform engineering services, including DevOps, CI/CD products, Legacy Mainframes, and Standardizations, to ensure your optimal performance. We prioritize reliability and cost-effectiveness through effective deployment processes, resource allocation, and configuration fine-tuning. Our cutting-edge platform engineering strategies guarantee you the best possible services in democratizing infrastructure and building resiliency by balancing cost.
             </p>
             <div className="mt-8">
               <NavLink to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all duration-300">
@@ -196,9 +196,9 @@ const partners = [
             maxWidth: 350
           }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'left' }}>{service.icon}</div>
-            <h3 className='text-left text-xl text-black font-semibold mb-6'>{service.title}</h3>
-            <p className='text-left text-md text-slate-600'>{service.description}</p>
-          </div>
+              <h3 className='text-left text-xl text-black font-semibold mb-6'>{service.title}</h3>
+              <p className='text-left text-md text-slate-600'>{service.description}</p>
+            </div>
         ))}
       </div>
     </div>
@@ -259,4 +259,4 @@ const partners = [
   );
 }
 
-export default Service3;
+export default Service6;

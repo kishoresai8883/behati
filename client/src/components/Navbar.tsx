@@ -36,20 +36,20 @@ import {
   CategoryTwoTone} from '@mui/icons-material';
 
 const products = [
-  { name: 'Cloud', path: '/product1', icon: Cloud },
-  { name: 'Cyber Security', path: '/product2', icon: Security },
-  { name: 'Digital Services', path: '/product3', icon: Devices },
-  { name: 'Blockchain', path: '/product4', icon: SquaresPlusIcon },
-  { name: 'Managed Services', path: '/product5', icon: ManageHistory },
-  { name: 'Data & Analytics', path: '/product6', icon: Analytics },
-  { name: 'Enterprises & SaaS Services', path: '/product7', icon: RealEstateAgent },
-  { name: 'Quality Engineering', path: '/product8', icon: Engineering },
+  { name: 'Cloud', path: '/service1', icon: Cloud },
+  { name: 'Cyber Security', path: '/service2', icon: Security },
+  { name: 'Digital Services', path: '/service3', icon: Devices },
+  { name: 'Blockchain', path: '/service4', icon: SquaresPlusIcon },
+  { name: 'Managed Services', path: '/service5', icon: ManageHistory },
+  { name: 'Data & Analytics', path: '/service6', icon: Analytics },
+  { name: 'Enterprises & SaaS Services', path: '/service7', icon: RealEstateAgent },
+  { name: 'Quality Engineering', path: '/service8', icon: Engineering },
 ]
 
 const services = [
-  { name: 'VGO', path: '/service1', icon: Category },
-  { name: 'VEngage', path: '/service2', icon: CategoryOutlined },
-  { name: 'V-Validate', path: '/service3', icon: CategoryTwoTone },
+  { name: 'VGO', path: '/product1', icon: Category },
+  { name: 'VEngage', path: '/product2', icon: CategoryOutlined },
+  { name: 'V-Validate', path: '/product3', icon: CategoryTwoTone },
 ]
 
 const solutions = [
@@ -104,7 +104,7 @@ const Navbar =() => {
         <PopoverGroup className="hidden lg:flex lg:mr-8">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              Products
+              Services
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
             </PopoverButton>
 
@@ -136,7 +136,7 @@ const Navbar =() => {
         <PopoverGroup className="hidden lg:flex lg:mr-8">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              Services
+              Products
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
             </PopoverButton>
 

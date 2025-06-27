@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 
 
-const Product1 = () => {
+function Product1() {
     const services = [
     {
       icon: Code,
@@ -75,6 +75,7 @@ const Product1 = () => {
       features: ['Payment Integration', 'Inventory Management', 'Customer Analytics', 'Order Processing'],
     }
   ];
+
 
   return (
     <div className="min-h-screen bg-white">

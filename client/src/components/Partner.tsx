@@ -12,7 +12,7 @@ const partners = [
   { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Tesla_Motors.svg' },
 ];
 
-export default function OurPartnersCarousel() {
+const OurPartnersCarousel = () => {
   return (
     <section className="bg-gray-100 py-20">
       <div className="max-w-7xl mx-auto text-center px-4">
@@ -56,3 +56,5 @@ export default function OurPartnersCarousel() {
   );
 }
 
+
+export default OurPartnersCarousel;
