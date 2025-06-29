@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 
-const Service5 = () => {
+const CloudMigration = () => {
     const services = [
     {
       icon: Code,
@@ -35,49 +35,49 @@ const Service5 = () => {
 
 const service = [
   {
-    title: "Multy-Factor Authentication",
-    description: "VDart Digital offers cloud-native multi-factor authentication (MFA) solutions to enhance user access security, minimizing the risk of data breaches.",
+    title: "Legacy Systems",
+    description: "VDart Digital analyzes your infrastructure to develop a precise cloud migration plan, ensuring a seamless transition to your chosen platform without missing any critical elements.",
     icon: "🌐"
   },
   {
-    title: "Advanced Threat Monitoring",
-    description: "VDart Digital's security as a service includes advanced threat monitoring and analysis tools to detect and respond to potential breaches promptly.",
+    title: "Performance & Scalability",
+    description: "VDart Digital creates customized cloud deployments using Azure, AWS, and GCP. Our experts optimize resource utilization, scalability, and flexibility for your business needs, giving you the agility to adapt to market demands and drive innovation.",
     icon: "🎨"
   },
   {
-    title: "Protection Against Vulnerabilities",
-    description: "Our expert team offers continuous vulnerability scanning and patch management services to ensure up-to-date applications and systems are protected against known vulnerabilities.",
+    title: "Cost Management",
+    description: "VDart Digital optimizes cloud migration for maximum performance and cost-effectiveness. We assess your infrastructure, identify opportunities for optimization, and help you save costs while seamlessly migrating to the cloud.",
     icon: "🚀"
   },
   {
     
-    title: "Compliance & Regulations",
-    description: "VDart Digital offers compliance management tools and services to help organizations maintain adherence to regulatory standards.",
+    title: "Change Management",
+    description: "VDart Digital simplifies Cloud migration with a robust change management process. We follow industry best practices and use automation to streamline the process, empowering your team to adapt to the new environment and maximize productivity.",
     icon: "🌐"
   },
   {
-    title: "Protection Against Insider Threats",
-    description: "Our team at VDart Digital offers user behavior analytics solutions, detecting anomalous activities and helping identify potential insider threats.",
+    title: "Security & Compliance",
+    description: "VDart Digital thoroughly assesses your existing infrastructure, applications, and data to identify potential challenges, risks, and opportunities. This allows us to develop a tailored migration strategy for a successful transition to the cloud.",
     icon: "🎨"
   },
   {
-    title: "Shared Responsibility Model",
-    description: "VDart Digital assists in implementing robust access controls, user management, and identity and access management (IAM) policies to ensure secure user access.",
+    title: "Clear Milestones, Deliverables & timelines",
+    description: "We at VDart Digital set clear goals and timelines for successful cloud migration. Our experts work closely with your team to establish achievable milestones and measurable deliverables, ensuring the migration stays on schedule and minimizing disruption to your operations.",
     icon: "🚀"
   },
 ];
 
 const partners = [
-  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg' },
-  { name: 'Facebook', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg' },
-  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
-  { name: 'Nvidia', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Nvidia_logo.svg' },
-  { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Tesla_Motors.svg' },
+  { name: 'Microsoft', logo: 'https://logos-world.net/wp-content/uploads/2020/09/Microsoft-Logo.png' },
+  { name: 'Google', logo: 'https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png' },
+  { name: 'Facebook', logo: 'https://th.bing.com/th/id/R.39a1d68aec01e3a9ce7c0ad7b9a9c6b2?rik=fvudu3UHrxOzGA&riu=http%3a%2f%2fpngimg.com%2fuploads%2ffacebook_logos%2ffacebook_logos_PNG19759.png&ehk=lxMHxgrLx0aXG6IO729Vd39tXLoekOxoiFN7goNPdEE%3d&risl=&pid=ImgRaw&r=0' },
+  { name: 'Apple', logo: 'https://logosmarcas.net/wp-content/uploads/2020/04/Apple-Simbolo.png' },
+  { name: 'Nvidia', logo: 'https://tse1.mm.bing.net/th/id/OIP.Tv5ZjzDW-ihj1a1uBdRoEwHaCS?rs=1&pid=ImgDetMain&o=7&rm=3' },
+  { name: 'Tesla', logo: 'https://tse4.mm.bing.net/th/id/OIP.WgRQ3UcDLPF0gxb5VR4f2QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
 ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -91,13 +91,13 @@ const partners = [
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Reduce Security Risk & Protect Your Data With
+            Simplify Your
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Cloud Security
+              Cloud Migration Journey
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-6xl mx-auto leading-relaxed">
-            Navigate the web without suspicion. Supercharge the power of the deep cloud security.
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Elevate your business and empower your team to drive productivity and growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
@@ -139,7 +139,7 @@ const partners = [
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-12 grayscale hover:grayscale-0 transition duration-300"
+                  className="h-12 hover:grayscale-0 transition duration-300"
                 />
               </SwiperSlide>
             ))}
@@ -149,14 +149,14 @@ const partners = [
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Cloud Security</h2>
+        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Cloud Migration Journey</h2>
         <div className="grid lg:grid-cols-2 max-w-7xl mx-auto items-center px-4 sm:px-6 lg:px-8">
           <div className="text-left pr-8">
             <h2 className="text-xl md:text-2xl mb-4" style={{ color: '#232323' }}>
-              From multi-factor authentication to advanced threat monitoring, code to access control, trust VDart Digital for complete cloud security solutions covering all aspects of expert and comprehensive protection.
+              Trust VDart Digital for transparent, seamless cloud migration to Azure, AWS, or GCP, where our expertise ensures a hassle-free transition tailored to your needs.
             </h2>
-            <p className="text-md text-gray-600 max-w-3xl mx-auto">
-              VDart Digital offers cloud security solutions with encryption, multi-factor authentication, and advanced threat monitoring. Our team ensures compliance with industry regulations and provides impenetrable protection against insider threats and vulnerabilities. We also assist with selecting trustworthy cloud providers and developing backup plans for business continuity. Choose VDart Digital for secure and dependable cloud deployments.
+            <p className="text-md text-gray-600 max-w-6xl mx-auto">
+              VDart Digital offers predictable cloud migration services, covering everything from lifting and shifting workloads to relocating data centers. Our expertise extends beyond migration as we develop a tailored cloud migration plan that aligns with your needs and goals. Our transparent approach leaves no room for surprises or unexpected hurdles, unlocking the value of VDart Digital on leading cloud platforms like Azure, AWS, and GCP.
             </p>
             <div className="mt-8">
               <NavLink to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all duration-300">
@@ -196,9 +196,9 @@ const partners = [
             maxWidth: 350
           }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'left' }}>{service.icon}</div>
-              <h3 className='text-left text-xl text-black font-semibold mb-6'>{service.title}</h3>
-              <p className='text-left text-md text-slate-600'>{service.description}</p>
-            </div>
+            <h3 className='text-left text-xl text-black font-semibold mb-6'>{service.title}</h3>
+            <p className='text-left text-md text-slate-600'>{service.description}</p>
+          </div>
         ))}
       </div>
     </div>
@@ -259,4 +259,4 @@ const partners = [
   );
 }
 
-export default Service5;
+export default CloudMigration;

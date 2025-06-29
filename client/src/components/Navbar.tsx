@@ -36,7 +36,7 @@ import {
   CategoryTwoTone} from '@mui/icons-material';
 
 const products = [
-  { name: 'Cloud', path: '/service1', icon: Cloud },
+  { name: 'Cloud', path: '/cloud', icon: Cloud },
   { name: 'Cyber Security', path: '/service2', icon: Security },
   { name: 'Digital Services', path: '/service3', icon: Devices },
   { name: 'Blockchain', path: '/service4', icon: SquaresPlusIcon },

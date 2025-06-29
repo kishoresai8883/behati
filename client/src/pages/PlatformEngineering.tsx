@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 
-const Service7 = () => {
+const PlatformEngineering = () => {
     const services = [
     {
       icon: Code,
@@ -35,49 +35,49 @@ const Service7 = () => {
 
 const service = [
   {
-    title: "Cost Management",
-    description: "VDart Digital offers cost-effective cloud management solutions with transparent pricing and tailored services based on client needs.",
+    title: "Automation Processes",
+    description: "VDart Digital optimizes technology stacks and automates infrastructure setups for efficient and effective goal achievement.",
     icon: "🌐"
   },
   {
-    title: "Flexible Service Models",
-    description: "VDart Digital's cloud services offer flexible control and customization options, which helps us work closely with clients to find a balance between managed and self-service options to meet individual needs.",
+    title: "Security & Compliance Guidelines",
+    description: "At VDart Digital, we prioritize the security and confidentiality of our clients' data and assets. Our adherence to industry standards and robust security measures ensure protection against threats and vulnerabilities.",
     icon: "🎨"
   },
   {
-    title: "Security Protocols",
-    description: "VDart Digital prioritizes security and protects client data with advanced protocols, encryption, and threat monitoring. Compliance with regulations ensures safety from breaches and unauthorized access.",
+    title: "Scaling & Resource Optimization",
+    description: "VDart Digital helps businesses optimize resource allocation based on demand patterns, increasing efficiency, reducing costs, and ensuring resilience in changing market conditions.",
     icon: "🚀"
   },
   {
     
-    title: "Communication & Coordination",
-    description: "VDart Digital prioritizes communication and collaboration, providing clear channels and frequent updates to clients. Our process-oriented approach and efficient bots enable quick problem-solving and proactive communication, building strong partnerships.",
+    title: "Establishing Secure Infrastructure",
+    description: "We help you create a secure and reliable infrastructure that meets high standards.",
     icon: "🌐"
   },
   {
-    title: "Scalability & Performance",
-    description: "VDart Digital provides scalable cloud solutions with advanced monitoring and optimization tools to ensure optimal performance and support for client's business operations.",
+    title: "Collaboration & Uniformity",
+    description: "Our focus is on promoting collaboration and productivity in software development and platform engineering through teamwork and streamlined processes.",
     icon: "🎨"
   },
   {
-    title: "Brand Reliability",
-    description: "VDart Digital ensures reliable brand availability through our process-oriented mindset and advanced automation tools, managing whether it is a bare metal infrastructure or custom-built applications with a proven track record of reliability and commitment to service-level agreements.",
+    title: "Cost-Effective Strategies",
+    description: "VDart Digital offers cost-effective platform engineering solutions that utilize open-source technology and strategic resource allocation for maximum ROI and business success.",
     icon: "🚀"
   },
 ];
 
 const partners = [
-  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg' },
-  { name: 'Facebook', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg' },
-  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
-  { name: 'Nvidia', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Nvidia_logo.svg' },
-  { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Tesla_Motors.svg' },
+  { name: 'Microsoft', logo: 'https://logos-world.net/wp-content/uploads/2020/09/Microsoft-Logo.png' },
+  { name: 'Google', logo: 'https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png' },
+  { name: 'Facebook', logo: 'https://th.bing.com/th/id/R.39a1d68aec01e3a9ce7c0ad7b9a9c6b2?rik=fvudu3UHrxOzGA&riu=http%3a%2f%2fpngimg.com%2fuploads%2ffacebook_logos%2ffacebook_logos_PNG19759.png&ehk=lxMHxgrLx0aXG6IO729Vd39tXLoekOxoiFN7goNPdEE%3d&risl=&pid=ImgRaw&r=0' },
+  { name: 'Apple', logo: 'https://logosmarcas.net/wp-content/uploads/2020/04/Apple-Simbolo.png' },
+  { name: 'Nvidia', logo: 'https://tse1.mm.bing.net/th/id/OIP.Tv5ZjzDW-ihj1a1uBdRoEwHaCS?rs=1&pid=ImgDetMain&o=7&rm=3' },
+  { name: 'Tesla', logo: 'https://tse4.mm.bing.net/th/id/OIP.WgRQ3UcDLPF0gxb5VR4f2QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
 ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -91,13 +91,13 @@ const partners = [
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Achieve Greater Gains With
+            Drive Consistency & Expand Your Business With
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Cloud Managed Services
+              Platform Engineering
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-6xl mx-auto leading-relaxed">
-            Automate, secure and optimize with confidence. Empower error-free and seamless services.
+            Utilize Platform Engineering resources to transform your visions into reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
@@ -139,7 +139,7 @@ const partners = [
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-12 grayscale hover:grayscale-0 transition duration-300"
+                  className="h-12 hover:grayscale-0 transition duration-300"
                 />
               </SwiperSlide>
             ))}
@@ -149,14 +149,14 @@ const partners = [
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Cloud Managed Services</h2>
+        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Platform Engineering</h2>
         <div className="grid lg:grid-cols-2 max-w-7xl mx-auto items-center px-4 sm:px-6 lg:px-8">
           <div className="text-left pr-8">
             <h2 className="text-xl md:text-2xl mb-4" style={{ color: '#232323' }}>
-              Choose VDart Digital's Cloud Managed Services for an optimized, efficient cloud journey, free from poor documentation, resilience oversights, and error-prone manual operations.
+              VDart Digital optimizes platform performance through advanced platform engineering solutions and cost-effective strategies. Trust VDart Digital for peak platform reliability.
             </h2>
             <p className="text-md text-gray-600 max-w-3xl mx-auto">
-              VDart Digital offers a comprehensive range of Cloud Managed Services designed to enhance operational efficiency, bolster security, and ensure seamless communication. With flexible control and customization options, we prioritize robust security measures and effective communication. VDart Digital’s cost-effective solutions and flexibility to avoid vendor lock-in, tailored to meet unique business needs, enable companies to focus on core business while leveraging their expertise in cloud management.
+              VDart Digital provides advanced platform engineering services, including DevOps, CI/CD products, Legacy Mainframes, and Standardizations, to ensure your optimal performance. We prioritize reliability and cost-effectiveness through effective deployment processes, resource allocation, and configuration fine-tuning. Our cutting-edge platform engineering strategies guarantee you the best possible services in democratizing infrastructure and building resiliency by balancing cost.
             </p>
             <div className="mt-8">
               <NavLink to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all duration-300">
@@ -259,4 +259,4 @@ const partners = [
   );
 }
 
-export default Service7;
+export default PlatformEngineering;

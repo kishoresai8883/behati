@@ -9,14 +9,6 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Service1 from './pages/Service1'
-import Service2 from './pages/Service2';
-import Service3 from './pages/Service3';
-import Service4 from './pages/Service4';
-import Service5 from './pages/Service5'
-import Service6 from './pages/Service6';
-import Service7 from './pages/Service7';
-import Service8 from './pages/Service8';
 import Product1 from './pages/Product1';
 import Product2 from './pages/Product2';
 import Product3 from './pages/Product3';
@@ -26,6 +18,22 @@ import Solution3 from './pages/Solution3';
 import Solution4 from './pages/Solution4';
 import Insight1 from './pages/Insight1';
 import Insight2 from './pages/Insight2';
+import Cloud from './pages/Cloud';
+import CloudMigration from './pages/CloudMigration';
+import MainframeModernization from './pages/MainframeModernization';
+import SapOnCloud from './pages/SapOnCloud';
+import CloudFinOps from './pages/CloudFinOps';
+import CloudSecurity from './pages/CloudSecurity';
+import PlatformEngineering from './pages/PlatformEngineering';
+import CloudManagedServices from './pages/CloudManagedServices';
+import CloudAdvisorySmeServices from './pages/CloudAdvisorySmeServices';
+import Cybersecurity from './pages/Cybersecurity';
+import DigitalServices from './pages/DigitalServices';
+import Blockchain from './pages/Blockchain';
+import Saas from './pages/Saas';
+import ManagedServices from './pages/ManagedServices';
+import DataAnalytics from './pages/DataAnalytics';
+import QualityEngineering from './pages/QualityEngineering';
 
 const App = () => {
   return (
@@ -37,14 +45,6 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/service1" element={<Service1/>} />
-          <Route path="/service2" element={<Service2 />} />
-          <Route path="/service3" element={<Service3 />} />
-          <Route path="/service4" element={<Service4 />} />
-          <Route path="/service5" element={<Service5/>}/>
-          <Route path="/service6" element={<Service6/>}/>
-          <Route path="/service7" element={<Service7/>}/>
-          <Route path="/service8" element={<Service8/>}/>
           <Route path="/product1" element={<Product1/>}/>
           <Route path="/product2" element={<Product2/>}/>
           <Route path="/product3" element={<Product3/>}/>
@@ -54,6 +54,22 @@ const App = () => {
           <Route path="/solution4" element={<Solution4/>}/>
           <Route path="/insight1" element={<Insight1 />} />
           <Route path="/insight2" element={<Insight2 />} />
+          <Route path="/cloud" element={<Cloud />} />
+          <Route path="/cloud/cloud-migration" element={<CloudMigration/>} />
+          <Route path="/cloud/mainframe-modernization" element={<MainframeModernization />} />
+          <Route path="/cloud/sap-on-cloud" element={<SapOnCloud />} />
+          <Route path="/cloud/cloud-finops" element={<CloudFinOps />} />
+          <Route path="/cloud/cloud-security" element={<CloudSecurity/>}/>
+          <Route path="/cloud/platform-engineering" element={<PlatformEngineering/>}/>
+          <Route path="/cloud/cloud-managed-services" element={<CloudManagedServices/>}/>
+          <Route path="/cloud/cloud-advisory-sme-services" element={<CloudAdvisorySmeServices/>}/>
+          <Route path="/cybersecurity" element={<Cybersecurity/>}/>
+          <Route path="digitalservices" element={<DigitalServices />} />
+          <Route path="/blockchain" element={<Blockchain />} />
+          <Route path="/enterprise-saas" element={<Saas/>}/>
+          <Route path="/managed-services" element={<ManagedServices />} />
+          <Route path="/data-analytics" element={<DataAnalytics />} />
+          <Route path="/quality-engineering" element={<QualityEngineering />} />
         </Routes>
         <Footer/>
       </div>
@@ -61,4 +77,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

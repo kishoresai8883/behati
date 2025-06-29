@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 
-const Service4 = () => {
+const CloudAdvisorySmeServices = () => {
     const services = [
     {
       icon: Code,
@@ -35,49 +35,49 @@ const Service4 = () => {
 
 const service = [
   {
-    title: "Automation & Cloud Management Tools",
-    description: "We use automation and cloud-based tools to monitor cost-saving policies and generate insights, optimizing our FinOps processes for maximum efficiency.",
+    title: "Keeping Up With Technology Trends",
+    description: "VDart Digital's experts stay on top of cloud computing trends, assessing emerging technologies for clients to make proactive decisions.",
     icon: "🌐"
   },
   {
-    title: "Regular Reviews & Pricing Models",
-    description: "Our pricing models adjust to your needs. Choose between on-demand, reserved, or spot instances based on workload and cost savings potential.",
+    title: "Training Employees With New Technology",
+    description: "VDart Digital offers tailored training on cloud tech and implementation for companies. Our skilled instructors provide practical guidance and hands-on learning.",
     icon: "🎨"
   },
   {
-    title: "Collaboration Between Finance & IT",
-    description: "Our standardized collaboration between Finance and IT teams aligns financial goals with technical decisions and effectively maps BAU operations to FinOps practices.",
+    title: "Extensive Research",
+    description: "VDart Digital offers expert cloud advisory services that provide actionable insights and recommendations for organizations, saving time and effort for organizations on extensive research.",
     icon: "🚀"
   },
   {
     
-    title: "Optimized Cloud Resource Utilization",
-    description: "We optimize cloud resource usage by analyzing patterns, adjusting instance sizes, and using auto-scaling and scheduling to eliminate idle resources.",
+    title: "An Agile Architectural Runway",
+    description: "By leveraging an agile architectural runway, VDart Digital ensures that customers can quickly embrace new cloud solutions and technologies, allowing them to stay ahead of disruptions and capitalize on emerging opportunities.",
     icon: "🌐"
   },
   {
-    title: "Centralized Cost Tracking System",
-    description: "Our centralized system of cloud management tools tracks costs across multiple subscriptions for better expense control.",
+    title: "Customized Strategies",
+    description: "VDart Digital works closely with organizations to understand their business goals and vision, aligning technology strategies with their long-term objectives.",
     icon: "🎨"
   },
   {
-    title: "Dedicated FinOps Team",
-    description: "Our team, with diverse expertise comprising members from finance, IT, and operations, handles the management of cloud expenses and ensures responsible usage.",
+    title: "Flexibility & Adaptation",
+    description: "VDart Digital helps organizations develop a dynamic technology roadmap that allows for flexibility and adaptation to evolving business needs and technological advancements.",
     icon: "🚀"
   },
 ];
 
 const partners = [
-  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg' },
-  { name: 'Facebook', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg' },
-  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
-  { name: 'Nvidia', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Nvidia_logo.svg' },
-  { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Tesla_Motors.svg' },
+  { name: 'Microsoft', logo: 'https://logos-world.net/wp-content/uploads/2020/09/Microsoft-Logo.png' },
+  { name: 'Google', logo: 'https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png' },
+  { name: 'Facebook', logo: 'https://th.bing.com/th/id/R.39a1d68aec01e3a9ce7c0ad7b9a9c6b2?rik=fvudu3UHrxOzGA&riu=http%3a%2f%2fpngimg.com%2fuploads%2ffacebook_logos%2ffacebook_logos_PNG19759.png&ehk=lxMHxgrLx0aXG6IO729Vd39tXLoekOxoiFN7goNPdEE%3d&risl=&pid=ImgRaw&r=0' },
+  { name: 'Apple', logo: 'https://logosmarcas.net/wp-content/uploads/2020/04/Apple-Simbolo.png' },
+  { name: 'Nvidia', logo: 'https://tse1.mm.bing.net/th/id/OIP.Tv5ZjzDW-ihj1a1uBdRoEwHaCS?rs=1&pid=ImgDetMain&o=7&rm=3' },
+  { name: 'Tesla', logo: 'https://tse4.mm.bing.net/th/id/OIP.WgRQ3UcDLPF0gxb5VR4f2QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
 ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -91,13 +91,13 @@ const partners = [
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Achieve Instant Savings & Cost Optimization in
+            Transcend the Promise of
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Cloud FinOps
+              Cloud Advisory & SME Services
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-6xl mx-auto leading-relaxed">
-            Gain end-to-end visibility and optimize cost management with FinOps excellence.
+            Elevate your organization with cloud advisory insights and reliable expert support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
@@ -139,7 +139,7 @@ const partners = [
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-12 grayscale hover:grayscale-0 transition duration-300"
+                  className="h-12 hover:grayscale-0 transition duration-300"
                 />
               </SwiperSlide>
             ))}
@@ -149,14 +149,14 @@ const partners = [
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Cloud FinOps</h2>
+        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Cloud Advisory & SME Services</h2>
         <div className="grid lg:grid-cols-2 max-w-7xl mx-auto items-center px-4 sm:px-6 lg:px-8">
           <div className="text-left pr-8">
             <h2 className="text-xl md:text-2xl mb-4" style={{ color: '#232323' }}>
-              Utilize cloud services to their fullest potential while optimizing your cloud spending by implementing Cloud FinOps services. Get the best of both worlds with VDart Digital.
+              Maximize your digital capabilities with VDart Digital's Cloud Advisory & SME services, ensuring resiliency, security, and compliance.
             </h2>
             <p className="text-md text-gray-600 max-w-3xl mx-auto">
-              VDart Digital’s FinOps team uses automation and cloud tools to track expenses across subscriptions efficiently. Our customizable pricing models offer options like on-demand, reserved, or spot instances. We maximize cloud resource utilization by analyzing usage patterns and implementing cloud optimization strategies. Our finance, IT, and operations experts collaborate seamlessly to manage cloud expenses responsibly on both strategic and operational levels.
+              VDart Digital’s Cloud Advisory & SME services help clients stay current with tech trends, train employees, and eliminate extensive research. Our experts, who stay up-to-date with the latest cloud computing trends, provide curated insights, tailored training, and an agile architectural runway aligned with the business vision. With VDart Digital’s support, organizations can navigate the evolving cloud landscape and drive success.
             </p>
             <div className="mt-8">
               <NavLink to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all duration-300">
@@ -196,9 +196,9 @@ const partners = [
             maxWidth: 350
           }}>
             <div style={{ fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'left' }}>{service.icon}</div>
-            <h3 className='text-left text-xl text-black font-semibold mb-6'>{service.title}</h3>
-            <p className='text-left text-md text-slate-600'>{service.description}</p>
-          </div>
+              <h3 className='text-left text-xl text-black font-semibold mb-6'>{service.title}</h3>
+              <p className='text-left text-md text-slate-600'>{service.description}</p>
+            </div>
         ))}
       </div>
     </div>
@@ -259,4 +259,4 @@ const partners = [
   );
 }
 
-export default Service4;
+export default CloudAdvisorySmeServices;
