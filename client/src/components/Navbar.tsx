@@ -35,7 +35,7 @@ import {
   CategoryOutlined,
   CategoryTwoTone} from '@mui/icons-material';
 
-const products = [
+/*const services = [
   { name: 'Cloud', path: '/cloud', icon: Cloud },
   { name: 'Cyber Security', path: '/service2', icon: Security },
   { name: 'Digital Services', path: '/service3', icon: Devices },
@@ -44,9 +44,133 @@ const products = [
   { name: 'Data & Analytics', path: '/service6', icon: Analytics },
   { name: 'Enterprises & SaaS Services', path: '/service7', icon: RealEstateAgent },
   { name: 'Quality Engineering', path: '/service8', icon: Engineering },
-]
+]*/
 
 const services = [
+  {
+    name: 'Cloud',
+    path: '/cloud',
+    icon: ChartPieIcon,
+    children: [
+      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
+      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
+      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
+      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
+      { name: 'Cloud Security', path: '/cloud/cloud-security' },
+      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
+      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
+      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+    ],
+  },
+  {
+    name: 'Cyber Security',
+    path: '/cybersecurity',
+    icon: CursorArrowRaysIcon,
+    children: [
+      { name: 'CIAM', path: '/cybersecurity/ciam' },
+      { name: 'Workforce Identity', path: '/cybersecurity/workforce-identity' },
+      { name: 'Security Engineering', path: '/cybersecurity/security-engineering' },
+      { name: 'Zero Trust Architecture', path: '/cybersecurity/zero-trust-architecture' },
+      { name: 'Governance Risk Management & Compliance', path: '/cybersecurity/governance-risk-management-compliance' },
+      { name: 'Cyber Defense & Investigation', path: '/ccybersecurityloud/cyber-defense-investigation' },
+      { name: 'Cyber Advisory', path: '/cybersecurity/cyber-advisory' },
+      { name: 'Cyber Resilience', path: '/cybersecurity/cyber-resilience' },
+    ],
+  },
+  {
+    name: 'Digital Services',
+    path: '/digital-services',
+    icon: FingerPrintIcon,
+    children: [
+      { name: 'Fullstack - Web', path: '/digital-services/fullstack-web' },
+      { name: 'Mobile App Development', path: '/digital-services/mobile-app-development' },
+      { name: 'Apps Support & Maintenance', path: '/digital-services/apps-support-maintenance' },
+      { name: 'Hyper Automation', path: '/digital-services/hyper-automation' },
+      { name: 'DevSecOps & Automation', path: '/digital-services/devsecops-automation' },
+      { name: 'SRE & Chaos Engineering', path: '/digital-services/sre-chaos-engineering' },
+      { name: 'Backend-Development', path: '/digital-services/backend-development' },
+      { name: 'Design & Architecture', path: '/digital-services/design-architecture' },
+      { name: 'UI/UX & Frontend Development', path: '/digital-services/uiux-frontend-development' },
+      { name: 'Quality Engineering & Assurance', path: '/digital-services/quality-engineering-assurance' },
+    ],
+  },
+  {
+    name: 'Blockchain',
+    path: '/blockchain',
+    icon: SquaresPlusIcon,
+    children: [
+      { name: 'Distributed Trust', path: '/blockchain/distributed-trust' },
+      { name: 'Ethereum', path: '/blockchain/ethereum' },
+      { name: 'Hyperledger', path: '/blockchain/hyperledger' },
+      { name: 'dApps', path: '/blockchain/dapps' },
+      { name: 'NFT', path: '/blockchain/nft' },
+      { name: 'IPFS', path: '/blockchain/ipfs' },
+    ],
+  },
+  {
+    name: 'Enterprise & SaaS Services',
+    path: '/enterprise-saas-services',
+    icon: ChartPieIcon,
+    children: [
+      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
+      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
+      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
+      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
+      { name: 'Cloud Security', path: '/cloud/cloud-security' },
+      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
+      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
+      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+    ],
+  },
+  {
+    name: 'Managed Services',
+    path: '/managed-services',
+    icon: CursorArrowRaysIcon,
+    children: [
+      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
+      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
+      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
+      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
+      { name: 'Cloud Security', path: '/cloud/cloud-security' },
+      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
+      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
+      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+    ],
+  },
+  {
+    name: 'Data & Analytics',
+    path: '/data-analytics',
+    icon: FingerPrintIcon,
+    children: [
+      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
+      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
+      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
+      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
+      { name: 'Cloud Security', path: '/cloud/cloud-security' },
+      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
+      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
+      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+    ],
+  },
+  {
+    name: 'Quality Engineering',
+    path: '/quality-engineering',
+    icon: SquaresPlusIcon,
+    children: [
+      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
+      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
+      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
+      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
+      { name: 'Cloud Security', path: '/cloud/cloud-security' },
+      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
+      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
+      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+    ],
+  },
+]
+
+
+const products = [
   { name: 'VGO', path: '/product1', icon: Category },
   { name: 'VEngage', path: '/product2', icon: CategoryOutlined },
   { name: 'V-Validate', path: '/product3', icon: CategoryTwoTone },
@@ -102,36 +226,42 @@ const Navbar =() => {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:mr-8">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
+          <div className="relative group">
+            <button className="text-white font-semibold flex items-center gap-1">
               Services
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-4 rounded-lg text-sm/6 hover:bg-gray-50"
-                  >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
-                    <div className="flex-auto">
-                      <NavLink to={item.path} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </NavLink>
-                    </div>
+              <ChevronDownIcon className="w-4 h-4" />
+            </button>
+            <div className="absolute left-0 top-full bg-white rounded-xl shadow-lg mt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition min-w-[250px] z-50">
+              {services.map((service) => (
+                <div key={service.name} className="relative group/item flex items-center rounded-xl text-sm/6 hover:bg-gray-100 w-full">
+                  <div className="bg-transparent ml-4 flex size-11 flex-none items-center justify-center rounded-xl">
+                      <service.icon aria-hidden="true" className="size-6 text-gray-600" />
                   </div>
-                ))}
-              </div>
-            </PopoverPanel>
-          </Popover>
+                  <NavLink
+                    to={service.path}
+                    className="block px-4 py-2 text-gray-900 font-semibold hover:bg-gray-100 w-full whitespace-nowrap"
+                  >
+                    {service.name}
+                    <span className="absolute inset-0" />
+                  </NavLink>
+
+                  {service.children && (
+                    <div className="absolute left-full top-0 bg-white rounded-xl shadow-lg opacity-0 invisible group-hover/item:visible group-hover/item:opacity-100 transition min-w-[250px] z-50">
+                      {service.children.map((sub) => (
+                        <NavLink
+                          key={sub.name}
+                          to={sub.path}
+                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100 whitespace-nowrap"
+                        >
+                          {sub.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </PopoverGroup>
         <PopoverGroup className="hidden lg:flex lg:mr-8">
           <Popover className="relative">
@@ -145,7 +275,7 @@ const Navbar =() => {
               className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
-                {services.map((item) => (
+                {products.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg text-sm/6 hover:bg-gray-50"
@@ -344,7 +474,9 @@ const Navbar =() => {
   )
 }
 
-export default Navbar
+export default Navbar;
+
+
 
 
 /*

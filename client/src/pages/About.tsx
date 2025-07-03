@@ -1,11 +1,11 @@
-
+import { NavLink } from "react-router-dom";
 
 const About = () => {
   return (
     <div className="text-gray-800 mt-20">
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-tr bg-[url('https://cyberintelsys.com/wp-content/uploads/2023/05/Your-paragraph-text-36-1024x487.png')] bg-cover py-20 px-6 md:px-16 lg:px-32">
+      <section className="relative bg-[url('https://www.state.gov/wp-content/uploads/2019/04/Science-Technology-shutterstock_449187505.jpg')] bg-cover h-96 py-20 px-6 md:px-16 lg:px-32">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight text-white">
             Empowering Businesses Through Innovation
@@ -74,17 +74,17 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-16 px-6 md:px-20">
+      <section className="bg-gradient-to-r bg-[url('https://img.freepik.com/premium-vector/abstract-dark-blue-modern-futuristic-science-technology-hi-tech-digital-abstract-dark-blue-colorful-design-banner-background-vector-abstract-graphic-design-banner-pattern-background-web-template_181182-33451.jpg')] bg-cover text-white text-center py-16 px-6 md:px-20">
         <h2 className="text-3xl font-bold mb-4">Let's build something great together</h2>
         <p className="mb-6 text-lg max-w-xl mx-auto">
           Reach out to us and let’s talk about your goals and how we can help you achieve them.
         </p>
-        <a
-          href="/contact"
+        <NavLink
+          to="/contact"
           className="inline-block bg-white text-indigo-600 font-semibold py-3 px-6 rounded-full shadow-md hover:bg-gray-100 transition"
         >
           Contact Us
-        </a>
+        </NavLink>
       </section>
     </div>
   );

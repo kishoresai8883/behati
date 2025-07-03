@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 
-const CloudMigration = () => {
+const WorkforceIdentity = () => {
     const services = [
     {
       icon: Code,
@@ -35,34 +35,34 @@ const CloudMigration = () => {
 
 const service = [
   {
-    title: "Legacy Systems",
-    description: "VDart Digital analyzes your infrastructure to develop a precise cloud migration plan, ensuring a seamless transition to your chosen platform without missing any critical elements.",
+    title: "Identity & Access Management(IAM)",
+    description: "VDart Digital improves digital security with IAM strategies, multi-factor authentication, and identity governance solutions. We monitor and prevent unauthorized access.",
     icon: "🌐"
   },
   {
-    title: "Performance & Scalability",
-    description: "VDart Digital creates customized cloud deployments using Azure, AWS, and GCP. Our experts optimize resource utilization, scalability, and flexibility for your business needs, giving you the agility to adapt to market demands and drive innovation.",
+    title: "Data Protection",
+    description: "VDart Digital offers robust data security measures, including encryption, classification frameworks, secure storage and backups, data retention policies, and disposal practices to prevent breaches.",
     icon: "🎨"
   },
   {
-    title: "Cost Management",
-    description: "VDart Digital optimizes cloud migration for maximum performance and cost-effectiveness. We assess your infrastructure, identify opportunities for optimization, and help you save costs while seamlessly migrating to the cloud.",
+    title: "Threat Detection & Response",
+    description: "VDart Digital provides security solutions that integrate advanced monitoring tools and technologies for proactive threat detection. We offer real-time alerts, incident response planning, and vulnerability assessments to minimize the impact of security breaches.",
     icon: "🚀"
   },
   {
     
-    title: "Change Management",
-    description: "VDart Digital simplifies Cloud migration with a robust change management process. We follow industry best practices and use automation to streamline the process, empowering your team to adapt to the new environment and maximize productivity.",
+    title: "User Awareness & Training",
+    description: "VDart Digital offers customizable security awareness programs, training modules, and simulated phishing campaigns to mitigate social engineering and phishing risks. We provide ongoing cybersecurity education to employees and regular updates on emerging threats and best practices.",
     icon: "🌐"
   },
   {
-    title: "Security & Compliance",
-    description: "VDart Digital thoroughly assesses your existing infrastructure, applications, and data to identify potential challenges, risks, and opportunities. This allows us to develop a tailored migration strategy for a successful transition to the cloud.",
+    title: "Privileged Access Management(PAM)",
+    description: "VDart Digital offers PAM solutions to protect privileged accounts, enforce strong passwords, monitor sessions, employ just-in-time access controls, and implement least privilege principles. We also provide centralized management and auditing capabilities for enhanced visibility and control.",
     icon: "🎨"
   },
   {
-    title: "Clear Milestones, Deliverables & timelines",
-    description: "We at VDart Digital set clear goals and timelines for successful cloud migration. Our experts work closely with your team to establish achievable milestones and measurable deliverables, ensuring the migration stays on schedule and minimizing disruption to your operations.",
+    title: "Compliance & Regulatory Support",
+    description: "VDart Digital ensures clients meet cybersecurity regulations and standards, including GDPR, HIPAA, and PCI DSS. We provide tools for compliance audits and stay up-to-date on the latest regulations for proactive guidance.",
     icon: "🚀"
   },
 ];
@@ -90,14 +90,14 @@ const partners = [
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/70 to-blue-900/80" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Simplify Your
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Cloud Migration Journey
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6 leading-tight">
+            Workforce Identity
+            <span className="block text-white">
+              Service to Ensure Secured Access Against Threats
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Elevate your business and empower your team to drive productivity and growth.
+            Meticulously manage all your user identities’ lifecycle, ensuring everyone has every necessary access to resources.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
@@ -149,14 +149,15 @@ const partners = [
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
-        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Cloud Migration Journey</h2>
+        <h2 className="text-4xl font-bold text-gray-600 text-center mb-12">Workforce Identity</h2>
         <div className="grid lg:grid-cols-2 max-w-7xl mx-auto items-center px-4 sm:px-6 lg:px-8">
           <div className="text-left pr-8">
             <h2 className="text-xl md:text-2xl mb-4" style={{ color: '#232323' }}>
-              Trust VDart Digital for transparent, seamless cloud migration to Azure, AWS, or GCP, where our expertise ensures a hassle-free transition tailored to your needs.
+              
+Implement adaptive authentication, centralized privilege access management, and seamless integration with VDart Digital’s Workforce Identity solutions to safeguard resources and navigate the cybersecurity landscape.
             </h2>
             <p className="text-md text-gray-600 max-w-6xl mx-auto">
-              VDart Digital offers predictable cloud migration services, covering everything from lifting and shifting workloads to relocating data centers. Our expertise extends beyond migration as we develop a tailored cloud migration plan that aligns with your needs and goals. Our transparent approach leaves no room for surprises or unexpected hurdles, unlocking the value of VDart Digital on leading cloud platforms like Azure, AWS, and GCP.
+              VDart Digital, pioneering the way in workforce identity solutions, is revolutionizing the post-pandemic world by addressing the critical aspects of remote work security and identity management. Our expert team excels in implementing adaptive and multi-factor authentication mechanisms, ensuring robust security for remote access across applications and end-user devices. With centralized privilege access management, we provide granular control and visibility, safeguarding sensitive resources. Our customized solutions are designed to seamlessly integrate into remote work environments, enabling organizations to navigate the evolving cybersecurity landscape with confidence.
             </p>
             <div className="mt-8">
               <NavLink to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition-all duration-300">
@@ -204,7 +205,7 @@ const partners = [
     </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -259,4 +260,4 @@ const partners = [
   );
 }
 
-export default CloudMigration;
+export default WorkforceIdentity;

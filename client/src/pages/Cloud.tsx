@@ -107,9 +107,9 @@ const Cloud = () => {
               <span>Explore More</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+            <NavLink to="/contact" className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               Get in Touch
-            </button>
+            </NavLink>
           </div>
         </div>
 
@@ -184,10 +184,10 @@ const Cloud = () => {
             To request further information
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+            <NavLink to="/contact" className="bg-gradient-to-r from-blue-500 to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
               <span>Contact Us</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NavLink>
           </div>
         </div>
       </section>

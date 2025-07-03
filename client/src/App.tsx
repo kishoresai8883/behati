@@ -28,6 +28,8 @@ import PlatformEngineering from './pages/PlatformEngineering';
 import CloudManagedServices from './pages/CloudManagedServices';
 import CloudAdvisorySmeServices from './pages/CloudAdvisorySmeServices';
 import Cybersecurity from './pages/Cybersecurity';
+import Ciam from './pages/ciam';
+import WorkforceIdentity from './pages/WorkforceIdentity';
 import DigitalServices from './pages/DigitalServices';
 import Blockchain from './pages/Blockchain';
 import Saas from './pages/Saas';
@@ -64,6 +66,8 @@ const App = () => {
           <Route path="/cloud/cloud-managed-services" element={<CloudManagedServices/>}/>
           <Route path="/cloud/cloud-advisory-sme-services" element={<CloudAdvisorySmeServices/>}/>
           <Route path="/cybersecurity" element={<Cybersecurity/>}/>
+          <Route path="/cybersecurity/ciam" element={<Ciam/>}/>
+          <Route path="/cybersecurity/workforce-identity" element={<WorkforceIdentity/>}/>
           <Route path="digitalservices" element={<DigitalServices />} />
           <Route path="/blockchain" element={<Blockchain />} />
           <Route path="/enterprise-saas" element={<Saas/>}/>

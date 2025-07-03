@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const CTA = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-r from-slate-800 via-gray-600 to-slate-600 py-24 sm:py-32">
+    <section className="relative isolate overflow-hidden bg-[url('https://img.freepik.com/premium-vector/abstract-dark-blue-modern-futuristic-science-technology-hi-tech-digital-abstract-dark-blue-colorful-design-banner-background-vector-abstract-graphic-design-banner-pattern-background-web-template_181182-33451.jpg')] bg-cover py-24 sm:py-32">
       <div className="absolute inset-0 -z-10 opacity-30 blur-3xl" aria-hidden="true">
         <div className="absolute left-[calc(50%-13rem)] top-0 h-[36rem] w-[72rem] bg-gradient-to-tr from-indigo-500 to-blue-500 opacity-20"></div>
       </div>
@@ -18,15 +18,15 @@ const CTA = () => {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <NavLink
             to="/contact"
-            className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 transition-all duration-300"
+            className="rounded-full border-b-blue-200 bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-300 transition-all duration-300"
           >
             Get in touch
           </NavLink>
           <NavLink
             to="/services"
-            className="text-sm font-semibold leading-6 text-white hover:underline underline-offset-4"
+            className="text-sm border px-6 py-3 rounded-full font-semibold leading-6 text-white hover:bg-gray-600"
           >
-            Explore services →
+            Explore services
           </NavLink>
         </div>
       </div>

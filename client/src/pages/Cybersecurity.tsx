@@ -4,72 +4,80 @@ import { NavLink } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-const cloudServices = [
+const services = [
   {
     id: 1,
     title: "Customer Identity & Access Management(CIAM)",
-    description: "Protect customer identities & enhance trust with advanced authentication & access control.",
+    description: "Protect customer identities and enhance trust with advanced authentication and access control.",
     color: "from-blue-500 to-cyan-500",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+    path: "/cybersecurity/ciam"
   },
   {
     id: 2,
     title: "Workforce Identity",
     description: "Ensure secure and seamless access for your workforce while maintaining compliance and operational efficiency.",
     color: "from-purple-500 to-pink-500",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+    path: "/cybersecurity/workforce-identity"
   },
   {
     id: 3,
     title: "Security Engineering",
     description: "Develop a robust security infrastructure to prevent cyber threats and safeguard sensitive business data.",
     color: "from-green-500 to-emerald-500",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
+    path: "/cybersecurity/security-engineering"
   },
   {
     id: 4,
     title: "Zero Trust Architecture",
     description: "Adopt a Zero Trust model to minimize attack surfaces and prevent lateral movement of threats.",
     color: "from-orange-500 to-red-500",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop",
+    path: "/cybersecurity/zero-trust-architecture"
   },
   {
     id: 5,
     title: "Governance, Risk Management & Compliance(GRC)",
-    description: "Reduce risks & achieve compliance with industry regulations to avoid penalties.",
+    description: "Reduce risks and achieve compliance with industry regulations to avoid penalties and data breaches.",
     color: "from-indigo-500 to-blue-500",
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop",
+    path: "/cybersecurity/grc"
   },
   {
     id: 6,
     title: "Cyber Defense & Investigation",
     description: "Prevent, detect, and respond to cyber threats with advanced threat intelligence and forensics.",
     color: "from-red-500 to-pink-500",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+    path: "/cybersecurity/cyber-defense-investigation"
   },
   {
     id: 7,
     title: "Cyber Advisory",
     description: "Prevent, detect, and respond to cyber threats with advanced threat intelligence and forensics.",
     color: "from-teal-500 to-cyan-500",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=300&fit=crop",
+    path: "/cybersecurity/cyber-advisory"
   },
   {
     id: 8,
     title: "Cyber Resilience",
     description: "Enhance your organization’s ability to recover from cyber incidents with robust resilience planning.",
     color: "from-violet-500 to-purple-500",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop"
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+    path: "/cybersecurity/cyber-resilience"
   }
 ];
 
 const partners = [
-  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
-  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg' },
-  { name: 'Facebook', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg' },
-  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
-  { name: 'Nvidia', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Nvidia_logo.svg' },
-  { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Logo_Tesla_Motors.svg' },
+  { name: 'Microsoft', logo: 'https://logos-world.net/wp-content/uploads/2020/09/Microsoft-Logo.png' },
+  { name: 'Google', logo: 'https://logosmarcas.net/wp-content/uploads/2020/09/Google-Logo-2010-2013.png' },
+  { name: 'Facebook', logo: 'https://th.bing.com/th/id/R.39a1d68aec01e3a9ce7c0ad7b9a9c6b2?rik=fvudu3UHrxOzGA&riu=http%3a%2f%2fpngimg.com%2fuploads%2ffacebook_logos%2ffacebook_logos_PNG19759.png&ehk=lxMHxgrLx0aXG6IO729Vd39tXLoekOxoiFN7goNPdEE%3d&risl=&pid=ImgRaw&r=0' },
+  { name: 'Apple', logo: 'https://logosmarcas.net/wp-content/uploads/2020/04/Apple-Simbolo.png' },
+  { name: 'Nvidia', logo: 'https://tse1.mm.bing.net/th/id/OIP.Tv5ZjzDW-ihj1a1uBdRoEwHaCS?rs=1&pid=ImgDetMain&o=7&rm=3' },
+  { name: 'Tesla', logo: 'https://tse4.mm.bing.net/th/id/OIP.WgRQ3UcDLPF0gxb5VR4f2QHaE8?rs=1&pid=ImgDetMain&o=7&rm=3' },
 ];
 
 const Cybersecurity = () => {
@@ -99,9 +107,9 @@ const Cybersecurity = () => {
               <span>Explore More</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+            <NavLink to="/contact" className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               Get in Touch
-            </button>
+            </NavLink>
           </div>
         </div>
 
@@ -143,23 +151,24 @@ const Cybersecurity = () => {
         </div>
       </section>
       
-      {/* Cloud Services Section */}
+      {/* Cybersecurity Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Cybersecurity Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Strengthen your defenses with VDart Digital’s industry-leading cybersecurity solutions.
+            At VDart Digital, we offer a comprehensive suite of cybersecurity services designed to help organizations mitigate threats, meet compliance requirements, and build a robust security posture.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {cloudServices.map((service, index) => (
+          {services.map((service, index) => (
             <ServiceCard 
               key={service.id} 
               service={service} 
               delay={index * 100}
+              path={service.path} // Pass the path prop to ServiceCard
             />
           ))}
         </div>
@@ -169,16 +178,16 @@ const Cybersecurity = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Boost your Digital Defense with Cybersecurity
+            The Ultimate Destination for all your Cloud Solutions
           </h2>
           <h2 className="text-3xl md:text-4xl text-blue-100 mb-8 max-w-2xl mx-auto">
             To request further information
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+            <NavLink to="/contact" className="bg-gradient-to-r from-blue-500 to-purple-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2">
               <span>Contact Us</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </NavLink>
           </div>
         </div>
       </section>
