@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="flex w-full">
         {/* Left side (50%) - Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center mt-24">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="block text-5xl md:text-6xl mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Your Digital Transformation Partner
           </h1>
           <p className="text-lg text-gray-300 mb-8">

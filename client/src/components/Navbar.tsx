@@ -1,91 +1,57 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
-import {
-  Dialog,
-  DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from '@headlessui/react'
-import {
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-
-import { 
-  Cloud,
-  Security, 
-  Devices,
-  ManageHistory,
-  Analytics,
-  RealEstateAgent,
-  Engineering,
-  Category,
-  CategoryOutlined,
-  CategoryTwoTone} from '@mui/icons-material';
-
-/*const services = [
-  { name: 'Cloud', path: '/cloud', icon: Cloud },
-  { name: 'Cyber Security', path: '/service2', icon: Security },
-  { name: 'Digital Services', path: '/service3', icon: Devices },
-  { name: 'Blockchain', path: '/service4', icon: SquaresPlusIcon },
-  { name: 'Managed Services', path: '/service5', icon: ManageHistory },
-  { name: 'Data & Analytics', path: '/service6', icon: Analytics },
-  { name: 'Enterprises & SaaS Services', path: '/service7', icon: RealEstateAgent },
-  { name: 'Quality Engineering', path: '/service8', icon: Engineering },
-]*/
+import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { ChevronDown, Menu, X, Cloud, Shield, Smartphone, Blocks, Building, Server, BarChart3, Users, TrendingUp } from 'lucide-react';
+import { InsightsOutlined } from '@mui/icons-material';
 
 const services = [
   {
     name: 'Cloud',
     path: '/cloud',
-    icon: ChartPieIcon,
+    icon: Cloud,
+    title: 'Seamless Cloud Solutions',
+    description: 'Cost-effective, flexible, & seamless cloud management for uninterrupted access.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
       { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
-      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
-      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
-      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
-      { name: 'Cloud Security', path: '/cloud/cloud-security' },
-      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
-      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
-      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+      { name: 'Mainframe Modernization', path: '/cloud/mainframe' },
+      { name: 'SAP on Cloud', path: '/cloud/sap' },
+      { name: 'Cloud FinOps', path: '/cloud/finops' },
+      { name: 'Cloud Security', path: '/cloud/security' },
+      { name: 'Platform Engineering', path: '/cloud/platform' },
+      { name: 'Cloud Managed Services', path: '/cloud/managed' },
+      { name: 'Cloud Advisory & SME Services', path: '/cloud/advisory-sme' },
     ],
   },
   {
-    name: 'Cyber Security',
+    name: 'Cybersecurity',
     path: '/cybersecurity',
-    icon: CursorArrowRaysIcon,
+    icon: Shield,
+    title: 'Advanced Security Solutions',
+    description: 'Comprehensive cybersecurity services to protect your digital assets.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
       { name: 'CIAM', path: '/cybersecurity/ciam' },
-      { name: 'Workforce Identity', path: '/cybersecurity/workforce-identity' },
-      { name: 'Security Engineering', path: '/cybersecurity/security-engineering' },
-      { name: 'Zero Trust Architecture', path: '/cybersecurity/zero-trust-architecture' },
+      { name: 'Workforce Identity', path: '/cybersecurity/workforce' },
+      { name: 'Security Engineering', path: '/cybersecurity/engineering' },
+      { name: 'Zero Trust Architecture', path: '/cybersecurity/zero-trust' },
       { name: 'Governance Risk Management & Compliance', path: '/cybersecurity/governance-risk-management-compliance' },
-      { name: 'Cyber Defense & Investigation', path: '/ccybersecurityloud/cyber-defense-investigation' },
-      { name: 'Cyber Advisory', path: '/cybersecurity/cyber-advisory' },
-      { name: 'Cyber Resilience', path: '/cybersecurity/cyber-resilience' },
+      { name: 'Cyber Defense & Investigation', path: '/cybersecurity/defense-investigation' },
+      { name: 'Cyber Advisory', path: '/cybersecurity/advisory' },
+      { name: 'Cyber Resilience', path: '/cybersecurity/resilience' },
     ],
   },
   {
     name: 'Digital Services',
     path: '/digital-services',
-    icon: FingerPrintIcon,
+    icon: Smartphone,
+    title: 'Digital Transformation',
+    description: 'Modern digital solutions for your business transformation needs.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
-      { name: 'Fullstack - Web', path: '/digital-services/fullstack-web' },
-      { name: 'Mobile App Development', path: '/digital-services/mobile-app-development' },
-      { name: 'Apps Support & Maintenance', path: '/digital-services/apps-support-maintenance' },
-      { name: 'Hyper Automation', path: '/digital-services/hyper-automation' },
+      { name: 'Fullstack - Web', path: '/digital/fullstack' },
+      { name: 'Mobile App Development', path: '/digital/mobile' },
+      { name: 'Apps Support & Maintenance', path: '/digital/support' },
+      { name: 'Hyper Automation', path: '/digital/automation' },
       { name: 'DevSecOps & Automation', path: '/digital-services/devsecops-automation' },
       { name: 'SRE & Chaos Engineering', path: '/digital-services/sre-chaos-engineering' },
       { name: 'Backend-Development', path: '/digital-services/backend-development' },
@@ -97,9 +63,12 @@ const services = [
   {
     name: 'Blockchain',
     path: '/blockchain',
-    icon: SquaresPlusIcon,
+    icon: Blocks,
+    title: 'Blockchain Innovation',
+    description: 'Cutting-edge blockchain solutions for distributed systems.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
-      { name: 'Distributed Trust', path: '/blockchain/distributed-trust' },
+      { name: 'Distributed Trust', path: '/blockchain/trust' },
       { name: 'Ethereum', path: '/blockchain/ethereum' },
       { name: 'Hyperledger', path: '/blockchain/hyperledger' },
       { name: 'dApps', path: '/blockchain/dapps' },
@@ -108,90 +77,110 @@ const services = [
     ],
   },
   {
-    name: 'Enterprise & SaaS Services',
-    path: '/enterprise-saas-services',
-    icon: ChartPieIcon,
+    name: 'Enterprise & SaaS Solutions',
+    path: '/enterprise',
+    icon: Building,
+    title: 'Enterprise Solutions',
+    description: 'Scalable enterprise and SaaS solutions for large organizations.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
-      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
-      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
-      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
-      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
-      { name: 'Cloud Security', path: '/cloud/cloud-security' },
-      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
-      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
-      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+      { name: 'SAP', path: '/enterprise/sap' },
+      { name: 'ServiceNow', path: '/enterprise/servicenow' },
+      { name: 'Salesforce', path: '/enterprise/salesforce' },
+      { name: 'Workday', path: '/enterprise/workday' },
+      { name: 'Oracle', path: '/enterprise-saas-services/oracle' },
+      { name: 'Adobe', path: '/enterprise-saas-services/adobe' },
+      { name: 'Sitecore', path: '/enterprise-saas-services/sitecore' },
     ],
   },
   {
     name: 'Managed Services',
     path: '/managed-services',
-    icon: CursorArrowRaysIcon,
+    icon: Server,
+    title: 'Managed IT Services',
+    description: '24/7 managed services for your IT infrastructure.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
-      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
-      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
-      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
-      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
-      { name: 'Cloud Security', path: '/cloud/cloud-security' },
-      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
-      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
-      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+      { name: 'Network & Security Management', path: '/managed-services/network-security-management' },
+      { name: 'Strategic IT Consulting & Continuous Improvement', path: '/managed-services/strategic-it-consulting-continuous-improvement' },
+      { name: 'Infrastructure & Data Center Management', path: '/managed-services/infrastructure-datacenter-management' },
+      { name: 'End-User Support & Device Management', path: '/managed-services/enduser-support-device-management' },
+      { name: 'Cloud & Application Management', path: '/managed-services/cloud-application-management' },
+      { name: 'IT Operations & Service Management', path: '/managed-services/it-operations-service-management' },
     ],
   },
   {
     name: 'Data & Analytics',
     path: '/data-analytics',
-    icon: FingerPrintIcon,
+    icon: BarChart3,
+    title: 'Data & Analytics',
+    description: 'Transform your data into actionable business insights.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
-      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
-      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
-      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
-      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
-      { name: 'Cloud Security', path: '/cloud/cloud-security' },
-      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
-      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
-      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+      { name: 'Internet of Things(IOT)', path: '/data-analytics/iot' },
+      { name: 'AI/NLP', path: '/data-analytics/ai-nlp' },
+      { name: 'Computer Vision', path: '/data-analytics/computer-vision' },
+      { name: 'Speech', path: '/data-analytics/speech' },
+      { name: 'ML/MLOps', path: '/data-analytics/ml-mlops' },
+      { name: 'Data Science', path: '/data-analytics/data-science' },
+      { name: 'Analytics', path: '/data-analytics/analytics' },
+      { name: 'Reports', path: '/data-analytics/reports' },
+      { name: 'Big Data, Data Lake', path: '/data-analytics/big-data-data-lake' },
+      { name: 'Data Fabric', path: '/data-analytics/data-fabric' },
     ],
   },
   {
     name: 'Quality Engineering',
     path: '/quality-engineering',
-    icon: SquaresPlusIcon,
+    icon: Users,
+    title: 'Quality Engineering',
+    description: 'Comprehensive quality assurance and testing services.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
     children: [
-      { name: 'Cloud Migration', path: '/cloud/cloud-migration' },
-      { name: 'Mainframe Modernization', path: '/cloud/mainframe-modernization' },
-      { name: 'SAP on Cloud', path: '/cloud/sap-on-cloud' },
-      { name: 'Cloud FinOps', path: '/cloud/cloud-finops' },
-      { name: 'Cloud Security', path: '/cloud/cloud-security' },
-      { name: 'Platform Engineering', path: '/cloud/platform-engineering' },
-      { name: 'Cloud Managed Services', path: '/cloud/cloud-managed-services' },
-      { name: 'Cloud Advisory & SME Services', path: '/cloud/cloud-advisory-sme-services' },
+      { name: 'QA Consulting & Strategy', path: '/quality-engineering/qa-consulting-strategy' },
+      { name: 'Agile Testing', path: '/quality-engineering/agile-testing' },
+      { name: 'Independent Certification', path: '/quality-engineering/independent-certification' },
+      { name: 'Managed Testing Services', path: '/quality-engineering/managed-testing-services' },
     ],
   },
-]
-
+  {
+    name: 'Supply Chain',
+    path: '/supply-chain',
+    icon: TrendingUp,
+    title: 'Supply Chain Solutions',
+    description: 'Optimize your supply chain with advanced technologies.',
+    image: 'https://www.devopsinstitute.com/wp-content/uploads/2021/05/iStock-1277731016-scaled.jpg',
+    children: [
+      { name: 'End to End AI Driven Supply Chain Execution', path: '/supply/analytics' },
+      { name: 'Connected Supply Chain Architecture', path: '/supply/logistics' },
+      { name: 'Core Functional Modules', path: '/supply/inventory' },
+      { name: 'Technology Stack Differentiators', path: '/supply/inventory' },
+    ],
+  }
+];
 
 const products = [
-  { name: 'VGO', path: '/product1', icon: Category },
-  { name: 'VEngage', path: '/product2', icon: CategoryOutlined },
-  { name: 'V-Validate', path: '/product3', icon: CategoryTwoTone },
-]
+  { name: 'VGO', path: '/products/vgo', icon: Cloud },
+  { name: 'VEngage', path: '/products/vengage', icon: Cloud },
+  { name: 'V-Validate', path: '/products/v-validate', icon: Cloud },
+];
 
 const solutions = [
-  { name: 'dM+', path: '/solution1', icon: ChartPieIcon },
-  { name: 'dMPS', path: '/solution2', icon: CursorArrowRaysIcon },
-  { name: 'dxM', path: '/solution3', icon: FingerPrintIcon },
-  { name: 'dZEN', path: '/solution4', icon: SquaresPlusIcon },
-]
+  { name: 'dM+', path: '/solutions/dm-plus', icon: Server },
+  { name: 'dMPS', path: '/solutions/dmps', icon: Server },
+  { name: 'dxM', path: '/solutions/dxm', icon: Server },
+  { name: 'dZEN', path: '/solutions/dzen', icon: Server },
+];
 
 const insights = [
-  { name: 'Blogs', path: '/insight1', icon: ChartPieIcon },
-  { name: 'Case Studies', path: '/insight2', icon: CursorArrowRaysIcon },
-]
+  { name: 'Blogs', path: '/insights/blogs', icon: InsightsOutlined },
+  { name: 'Case Studies', path: '/insights/case-studies', icon: InsightsOutlined },
+];
 
-
-const Navbar =() => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeService, setActiveService] = useState(services[0]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -202,376 +191,288 @@ const Navbar =() => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+
   return (
-    <header className={`navbar ${isScrolled ? 'scrolled' : ''} bg-transparent lg:bg-transparent`}>
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        <div className="flex lg:flex-1">
-          <NavLink to="/" className="-m-1.5 p-1.5 flex justify-center items-center gap-x-2">
-            <img
-              alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
-            <span className="text-white text-2xl font-semibold">Behati</span>
-          </NavLink>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6" />
-          </button>
-        </div>
-        <PopoverGroup className="hidden lg:flex lg:mr-8">
-          <div className="relative group">
-            <button className="text-white font-semibold flex items-center gap-1">
-              Services
-              <ChevronDownIcon className="w-4 h-4" />
-            </button>
-            <div className="absolute left-0 top-full bg-white rounded-xl shadow-lg mt-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition min-w-[250px] z-50">
-              {services.map((service) => (
-                <div key={service.name} className="relative group/item flex items-center rounded-xl text-sm/6 hover:bg-gray-100 w-full">
-                  <div className="bg-transparent ml-4 flex size-11 flex-none items-center justify-center rounded-xl">
-                      <service.icon aria-hidden="true" className="size-6 text-gray-600" />
+    <nav className={`navbar ${
+      isScrolled 
+        ? 'bg-transparent' 
+        : ''
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <NavLink to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg"></div>
+              <span className={`text-xl font-bold ${
+                isScrolled ? 'text-white' : 'text-white'
+              }`}>
+                Behati
+              </span>
+            </NavLink>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {/* Services Mega Menu */}
+            <div className="relative group">
+              <button className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isScrolled 
+                  ? 'text-white hover:text-blue-600' 
+                  : 'text-white hover:text-blue-200'
+              }`}>
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {/* Mega Menu Dropdown */}
+              <div className="absolute left-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="bg-white rounded-lg shadow-2xl border border-gray-200 w-[800px] -translate-x-1/4">
+                  <div className="flex">
+                    {/* Left Side - Service Categories */}
+                    <div className="w-1/2 p-6 border-r border-gray-200">
+                      <div className="space-y-2">
+                        {services.map((service) => (
+                          <div
+                            key={service.name}
+                            className={`flex items-center p-3 rounded-lg cursor-pointer transition-colors ${
+                              activeService.name === service.name
+                                ? 'bg-blue-50 text-blue-600'
+                                : 'hover:bg-gray-50 text-gray-700'
+                            }`}
+                            onMouseEnter={() => setActiveService(service)}
+                          >
+                            <service.icon className="w-5 h-5 mr-3" />
+                            <span className="font-medium">{service.name}</span>
+                            <ChevronDown className="w-4 h-4 ml-auto rotate-[-90deg]" />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right Side - Service Details */}
+                    <div className="w-1/2 p-6">
+                      <div className="mb-4">
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                          {activeService.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 mb-4">
+                          {activeService.description}
+                        </p>
+                        {activeService.image && (
+                          <div className="mb-4">
+                            <img 
+                              src={activeService.image} 
+                              alt={activeService.title}
+                              className="w-full h-32 object-cover rounded-lg"
+                            />
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className="space-y-1">
+                        {activeService.children?.map((child) => (
+                          <NavLink
+                            key={child.name}
+                            to={child.path}
+                            className="block px-3 py-1 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                          >
+                            {child.name}
+                          </NavLink>
+                        ))}
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Other Menu Items */}
+            <div className="relative group">
+              <button className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isScrolled 
+                  ? 'text-white hover:text-blue-600' 
+                  : 'text-white hover:text-blue-200'
+              }`}>
+                <span>Products</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute left-0 top-full bg-white shadow-xl border border-gray-200 rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px]">
+                <div className="p-2">
+                  {products.map((product) => (
+                    
+                    <NavLink
+                      key={product.name}
+                      to={product.path}
+                      className="flex px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                    >
+                      <product.icon className="w-5 h-5 mr-3" />
+                      {product.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <button className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isScrolled 
+                  ? 'text-white hover:text-blue-600' 
+                  : 'text-white hover:text-blue-200'
+              }`}>
+                <span>Solutions</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute left-0 top-full bg-white shadow-xl border border-gray-200 rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px]">
+                <div className="p-2">
+                  {solutions.map((solution) => (
+                    <NavLink
+                      key={solution.name}
+                      to={solution.path}
+                      className="flex px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                    >
+                      <solution.icon className="w-5 h-5 mr-3" />
+                      {solution.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <button className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isScrolled 
+                  ? 'text-white hover:text-blue-600' 
+                  : 'text-white hover:text-blue-200'
+              }`}>
+                <span>Insights</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute left-0 top-full bg-white shadow-xl border border-gray-200 rounded-lg mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[200px]">
+                <div className="p-2">
+                  {insights.map((insight) => (
+                    <NavLink
+                      key={insight.name}
+                      to={insight.path}
+                      className="flex px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                    >
+                      <insight.icon className="w-5 h-5 mr-3" />
+                      {insight.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            </div>
+              <NavLink to="/about" className="text-sm/6 font-medium text-white lg:mr-8">
+                About
+              </NavLink>
+              <NavLink to="/careers" className="text-sm/6 font-medium text-white lg:mr-8">
+                Career
+              </NavLink>
+              <NavLink to="/contact" className="text-sm/6 font-medium text-white">
+                Contact
+              </NavLink>     
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`p-2 rounded-md transition-colors ${isScrolled ? 'text-white hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+          
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-4">
+              {/* Services */}
+              <div>
+                <div className="text-gray-900 font-medium px-3 py-2">Services</div>
+                {services.map((service) => (
                   <NavLink
+                    key={service.name}
                     to={service.path}
-                    className="block px-4 py-2 text-gray-900 font-semibold hover:bg-gray-100 w-full whitespace-nowrap"
+                    className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {service.name}
-                    <span className="absolute inset-0" />
                   </NavLink>
-
-                  {service.children && (
-                    <div className="absolute left-full top-0 bg-white rounded-xl shadow-lg opacity-0 invisible group-hover/item:visible group-hover/item:opacity-100 transition min-w-[250px] z-50">
-                      {service.children.map((sub) => (
-                        <NavLink
-                          key={sub.name}
-                          to={sub.path}
-                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100 whitespace-nowrap"
-                        >
-                          {sub.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </PopoverGroup>
-        <PopoverGroup className="hidden lg:flex lg:mr-8">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              Products
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
-
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg text-sm/6 hover:bg-gray-50"
-                  >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
-                    <div className="flex-auto">
-                      <NavLink to={item.path} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </NavLink>
-                    </div>
-                  </div>
                 ))}
               </div>
-            </PopoverPanel>
-          </Popover>
-        </PopoverGroup>
-        <PopoverGroup className="hidden lg:flex lg:mr-8">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              Solutions
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
 
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {solutions.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg text-sm/6 hover:bg-gray-50"
+              {/* Products */}
+              <div>
+                <div className="text-gray-900 font-medium px-3 py-2">Products</div>
+                {products.map((product) => (
+                  <NavLink
+                    key={product.name}
+                    to={product.path}
+                    className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
-                    <div className="flex-auto">
-                      <NavLink to={item.path} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </NavLink>
-                    </div>
-                  </div>
+                    {product.name}
+                  </NavLink>
                 ))}
               </div>
-            </PopoverPanel>
-          </Popover>
-        </PopoverGroup>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
-              Insights
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-white" />
-            </PopoverButton>
 
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {insights.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg text-sm/6 hover:bg-gray-50"
+              {/* Solutions */}
+              <div>
+                <div className="text-gray-900 font-medium px-3 py-2">Solutions</div>
+                {solutions.map((solution) => (
+                  <NavLink
+                    key={solution.name}
+                    to={solution.path}
+                    className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
-                    </div>
-                    <div className="flex-auto">
-                      <NavLink to={item.path} className="block font-semibold text-gray-900">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </NavLink>
-                    </div>
-                  </div>
+                    {solution.name}
+                  </NavLink>
                 ))}
               </div>
-            </PopoverPanel>
-          </Popover>
-          <NavLink to="/about" className="text-sm/6 font-semibold text-white">
-            About
-          </NavLink>
-          <NavLink to="/careers" className="text-sm/6 font-semibold text-white">
-            Career
-          </NavLink>
-          <NavLink to="/contact" className="text-sm/6 font-semibold text-white">
-            Contact
-          </NavLink>
-        </PopoverGroup>
-      </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-        <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5 flex justify-center items-center gap-x-2">
-              <img
-                alt="logo"
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
-              <span className="text-black font-semibold">Dimiour</span>
-            </a>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-black"
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="size-6" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Products
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Services
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Insights
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                  </DisclosureButton>
-                  <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
-                      <DisclosureButton
-                        key={item.name}
-                        as="a"
-                        
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </DisclosureButton>
-                    ))}
-                  </DisclosurePanel>
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
+
+              {/* Insights */}
+              <div>
+                <div className="text-gray-900 font-medium px-3 py-2">Insights</div>
+                {insights.map((insight) => (
+                  <NavLink
+                    key={insight.name}
+                    to={insight.path}
+                    className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {insight.name}
+                  </NavLink>
+                ))}
+              </div>
+
+              {/* Other pages */}
+              <div>
+                <NavLink to="/about" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
                   About
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
+                </NavLink>
+                <NavLink to="/careers" className="block px-6 py-2 text-sm text-gray-600 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>
                   Career
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Contact
-                </a>
+                </NavLink>
               </div>
+
+              <NavLink
+                to="/contact"
+                className="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors mx-3 mt-4"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact Us
+              </NavLink>
             </div>
           </div>
-        </DialogPanel>
-      </Dialog>
-    </header>
-  )
-}
+        )}
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;
-
-
-
-
-/*
-'use client'
-
-import { useState, useEffect } from 'react'
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
-
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[rgba(10,46,107,1)] shadow-md' : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        
-        <div className="flex items-center space-x-2">
-          <img src="/logo.svg" alt="Logo" className="h-8 w-8" />
-          <span className="text-white text-xl font-bold">Dimiour</span>
-        </div>
-
-       
-        <nav className="hidden md:flex space-x-8 items-center">
-          <a href="#" className="text-white hover:text-indigo-200 transition">Home</a>
-
-          <div className="relative group">
-            <button className="flex items-center text-white hover:text-indigo-200 transition" 
-              onClick={() => setServicesOpen(!servicesOpen)}>
-              Services
-              <ChevronDownIcon className={`ml-1 w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {servicesOpen && (
-              <div className="absolute left-0 mt-2 w-40 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200">
-              <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Web Design</a>
-              <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">SEO</a>
-              <a href="#" className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Marketing</a>
-            </div>
-            )}  
-          </div>
-
-          <a href="#" className="text-white hover:text-indigo-200 transition">About</a>
-          <a href="#" className="text-white hover:text-indigo-200 transition">Contact</a>
-        </nav>
-
-        
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white focus:outline-none"
-        >
-          {menuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
-        </button>
-      </div>
-
-      
-      {menuOpen && (
-        <div className="md:hidden bg-[rgba(10,46,107,1)] px-4 pb-4 space-y-2">
-          <a href="#" className="block text-white hover:text-indigo-200">Home</a>
-
-          <div>
-            <button
-              onClick={() => setServicesOpen(!servicesOpen)}
-              className="flex items-center justify-between w-full text-white hover:text-indigo-200"
-            >
-              Services
-              <ChevronDownIcon className={`ml-1 w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {servicesOpen && (
-              <div className="ml-4 mt-2 space-y-1">
-                <a href="#" className="block text-white hover:text-indigo-200">Web Design</a>
-                <a href="#" className="block text-white hover:text-indigo-200">SEO</a>
-                <a href="#" className="block text-white hover:text-indigo-200">Marketing</a>
-              </div>
-            )}
-          </div>
-
-          <a href="#" className="block text-white hover:text-indigo-200">About</a>
-          <a href="#" className="block text-white hover:text-indigo-200">Contact</a>
-        </div>
-      )}
-    </header>
-  )
-}
-
-export default Navbar
-*/

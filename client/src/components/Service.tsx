@@ -49,7 +49,7 @@ const Service = () => {
     <div style={{ maxWidth: 1200, margin: '48px auto', textAlign: 'center' }}>
       <h2 className="text-4xl font-bold text-gray-800 mb-2 mt-8">Our Core Services</h2>
       <p className='text-lg text-gray-500'>Explore the range of services we offer to help your business grow.</p>
-      <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', marginTop: '2rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '2rem' }}>
         {service.map((service, idx) => (
           <div key={idx} style={{
             background: '#fff',
